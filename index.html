@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Sengar - AI/ML Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased">
+
+    <div class="custom-cursor"></div>
+
+    <nav class="navbar-glass sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="nav-link text-2xl font-bold text-white magnetic">PS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 magnetic">About</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 magnetic">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 magnetic">Projects</a>
+                        <a href="#resume" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 magnetic">Resume</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 magnetic">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <span class="sr-only">Open main menu</span><i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-gray-300">About</a>
+                <a href="#skills" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-gray-300">Skills</a>
+                <a href="#projects" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-gray-300">Projects</a>
+                <a href="#resume" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-gray-300">Resume</a>
+                <a href="#contact" class="block nav-link px-3 py-2 rounded-md text-base font-medium text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="about" class="hero-section">
+        <div id="three-canvas"></div>
+        <div class="hero-content max-w-7xl mx-auto py-20 px-4 sm:py-24 lg:py-32 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center">
+                <img class="h-40 w-40 sm:h-48 sm:w-48 rounded-full object-cover border-4 border-sky-400 shadow-xl" src="assets/images/profilepicture.jpg" alt="Profile Picture" onerror="this.onerror=null; this.src='https://placehold.co/200x200/38bdf8/FFFFFF?text=PS';">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mt-8">Hi, I'm <span class="text-sky-400">Parth Sengar</span></h1>
+                <div class="mt-4 text-lg md:text-2xl text-gray-300">
+                    <span id="typewriter-text" class="typewriter">I am a passionate Developer</span>
+                </div>
+                <p class="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-gray-300">I am a passionate AI/ML engineer dedicated to building intelligent systems and extracting actionable insights from data. I love solving complex problems with data-driven approaches.</p>
+                <div class="mt-10 flex justify-center space-x-6">
+                    <a href="https://github.com/ParthSengar28" target="_blank" class="text-gray-400 social-icon magnetic"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/parth-sengar-314621245/" target="_blank" class="text-gray-400 social-icon magnetic"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a href="https://leetcode.com/u/Parth_Sengar/" target="_blank" class="text-gray-400 social-icon magnetic"><i class="fas fa-code fa-2x"></i></a>
+                    <a href="mailto:sengarparth01@gmail.com" class="text-gray-400 social-icon magnetic"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="skills" class="py-24 bg-gray-900 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">Technical Skills</h2>
+                <p class="mt-4 text-lg text-gray-400">My technical toolkit for data science and machine learning.</p>
+            </div>
+            <div class="mt-16">
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-sky-400 text-center mb-8">Languages & Databases</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fab fa-python fa-3x text-yellow-400"></i><span class="mt-4 font-medium">Python</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-database fa-3x text-teal-400"></i><span class="mt-4 font-medium">SQL</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-file-code fa-3x text-blue-400"></i><span class="mt-4 font-medium">C/C++</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fab fa-html5 fa-3x text-orange-500"></i><span class="mt-4 font-medium">HTML</span></div>
+                    </div>
+                </div>
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-sky-400 text-center mb-8">ML/DL Frameworks & Libraries</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-robot fa-3x text-orange-500"></i><span class="mt-4 font-medium">TensorFlow</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-brain fa-3x text-red-500"></i><span class="mt-4 font-medium">PyTorch</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-cogs fa-3x text-sky-400"></i><span class="mt-4 font-medium">Scikit-learn</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-chart-line fa-3x text-purple-400"></i><span class="mt-4 font-medium">Pandas</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-calculator fa-3x text-blue-400"></i><span class="mt-4 font-medium">NumPy</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-chart-bar fa-3x text-green-400"></i><span class="mt-4 font-medium">Matplotlib</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-palette fa-3x text-pink-400"></i><span class="mt-4 font-medium">Seaborn</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-camera-retro fa-3x text-gray-400"></i><span class="mt-4 font-medium">OpenCV</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-hands fa-3x text-lime-400"></i><span class="mt-4 font-medium">MediaPipe</span></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-sky-400 text-center mb-8">Tools & Platforms</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8">
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-book-open fa-3x text-orange-600"></i><span class="mt-4 font-medium">Jupyter</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fab fa-git-alt fa-3x text-red-600"></i><span class="mt-4 font-medium">Git</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fab fa-github fa-3x text-white"></i><span class="mt-4 font-medium">GitHub</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fab fa-google fa-3x text-blue-500"></i><span class="mt-4 font-medium">Google Colab</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-code fa-3x text-sky-500"></i><span class="mt-4 font-medium">VS Code</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-water fa-3x text-cyan-400"></i><span class="mt-4 font-medium">Streamlit</span></div>
+                        <div class="card p-6 flex flex-col items-center magnetic"><i class="fas fa-smile-beam fa-3x text-yellow-300"></i><span class="mt-4 font-medium">Hugging Face</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-gray-800 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">My Projects</h2>
+                <p class="mt-4 text-lg text-gray-400">A selection of my work in AI, Machine Learning and Data Science.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="project-card card overflow-hidden magnetic">
+                    <div class="overflow-hidden"><img class="w-full h-56 object-cover" src="assets/images/project1.avif" alt="Project 1 Screenshot"></div>
+                    <div class="p-6 flex flex-col flex-grow project-card-content">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Spam Email Detector</h3>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed a Spam-Email-Detector using CountVectorizer + Multinomial Naive Bayes.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Sci-kit Learn</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Python</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Streamlit</span>
+                        </div>
+                        <div class="flex justify-end space-x-4 mt-auto pt-4">
+                            <a href="https://github.com/ParthSengar28/Spam-Email-Detection" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-github fa-lg mr-2"></i>GitHub</a>
+                            <a href="https://spam-email-detection-uctzxjslqym2v8kmanchnu.streamlit.app/" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fas fa-external-link-alt fa-lg mr-2"></i>Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card overflow-hidden magnetic">
+                    <div class="overflow-hidden"><img class="w-full h-56 object-cover" src="assets/images/digitalmarketing.webp" alt="Project 2 Screenshot"></div>
+                    <div class="p-6 flex flex-col flex-grow project-card-content">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Kahaani Haus Digital Marketing Website</h3>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Designed and developed a modern, engaging website for Kahaani Haus, a digital marketing agency. The primary goal was to create a visually attractive and high-performance online presence that effectively showcases their services and builds client trust, featuring cutting-edge web technologies.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">HTML</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Tailwind CSS</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Three.js</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Typed.js</span>
+                        </div>
+                        <div class="flex justify-end space-x-4 mt-auto pt-4">
+                            <a href="https://kahaanihaus.in/" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fas fa-external-link-alt fa-lg mr-2"></i>Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card overflow-hidden magnetic">
+                    <div class="overflow-hidden"><img class="w-full h-56 object-cover" src="assets/images/project2.jpg" alt="Project 2 Screenshot"></div>
+                    <div class="p-6 flex flex-col flex-grow project-card-content">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Hand Gesture Mouse Control</h3>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">A futuristic hand-gesture-based virtual mouse. Control your computer cursor and perform clicks using just your hand gestures.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">OpenCV</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">MediaPipe</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">PyAutoGUI</span>
+                        </div>
+                        <div class="flex justify-end space-x-4 mt-auto pt-4">
+                            <a href="https://github.com/ParthSengar28/HandGestureMouseControl" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-github fa-lg mr-2"></i>GitHub</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="project-card card overflow-hidden magnetic">
+                    <div class="overflow-hidden"><img class="w-full h-56 object-cover" src="assets/images/project3.jpg" alt="Project 3 Screenshot"></div>
+                    <div class="p-6 flex flex-col flex-grow project-card-content">
+                        <h3 class="text-xl font-semibold mb-2 text-white">AI Powered Resume Analyzer</h3>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">An intelligent web app that analyzes resumes using Groq’s LLaMA3-70B model to provide actionable improvement suggestions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Groq LLM</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">Streamlit</span>
+                            <span class="tech-tag text-xs text-gray-300 font-semibold px-2 py-1 rounded">LangChain</span>
+                        </div>
+                        <div class="flex justify-end space-x-4 mt-auto pt-4">
+                            <a href="https://github.com/ParthSengar28/Resume-Analyzer" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-github fa-lg mr-2"></i>GitHub</a>
+                            <a href="https://resume-analyzer-u6rkadhocdmaamsqd99xba.streamlit.app/" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fas fa-external-link-alt fa-lg mr-2"></i>Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="py-24 bg-gray-900 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+               <h2 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">My Resume</h2>
+               <p class="mt-4 text-lg text-gray-400">You can view my resume and download a copy for your reference.</p>
+               <div class="mt-10">
+                   <a href="resume/ParthSengarResume.pdf" target="_blank" class="glowing-btn inline-flex items-center justify-center px-8 py-4 border-transparent text-base font-medium rounded-md shadow-lg magnetic">
+                       <i class="fas fa-download mr-3"></i>Download Resume
+                   </a>
+               </div>
+        </div>
+    </section>
+
+    <section id="contact" class="hero-section py-24">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">Get In Touch</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">My inbox is always open. Whether you have a question or a proposal, I'll get back to you! Feel free to reach out about opportunities or just to connect.</p>
+            <div class="mt-10">
+                <a href="mailto:sengarparth01@gmail.com" class="glowing-btn inline-block text-xl font-medium rounded-md px-10 py-4 magnetic">
+                    Say Hello
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2024 Parth Sengar. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed & Built by Parth Sengar</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script src="assets/js/threeDBackground.js"></script>
+</body>
+</html>

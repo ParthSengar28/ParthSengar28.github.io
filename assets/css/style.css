@@ -1,0 +1,135 @@
+:root {
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
+    --gray-900: #111827;
+    --gray-800: #1f2937;
+    --gray-400: #9ca3af;
+    --cursor-color: #ffffff;
+    --cursor-highlight: var(--sky-400);
+}
+
+/* --- Custom Cursor --- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--cursor-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.3s, background-color 0.3s;
+    z-index: 9999;
+}
+.custom-cursor.highlight {
+    background-color: rgba(56, 189, 248, 0.2);
+    border-color: var(--cursor-highlight);
+}
+body {
+    cursor: none;
+    font-family: 'Inter', sans-serif;
+    background-color: #090a0f;
+    color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+a, button {
+    cursor: none;
+}
+/* Hide custom cursor on touch devices */
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none;
+    }
+    body, a, button {
+        cursor: auto;
+    }
+}
+
+/* --- Navbar --- */
+.navbar-glass {
+    background-color: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link:hover { color: var(--sky-400); }
+.nav-link::after {
+    content: ''; position: absolute; width: 100%; transform: scaleX(0);
+    height: 2px; bottom: -4px; left: 0; background-color: var(--sky-400);
+    transform-origin: bottom right; transition: transform 0.25s ease-out;
+}
+.nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+/* --- Hero Section & 3D Background --- */
+.hero-section {
+    position: relative;
+    background: #090a0f;
+    overflow: hidden;
+}
+#three-canvas {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* --- Social Icons --- */
+.social-icon { transition: transform 0.3s ease-in-out, color 0.3s ease; }
+.social-icon:hover { transform: scale(1.2) translateY(-2px); color: var(--sky-400); }
+
+/* --- Typewriter --- */
+.typewriter {
+    display: inline-block; overflow: hidden; border-right: .15em solid var(--sky-400);
+    white-space: nowrap; margin: 0 auto; letter-spacing: .1em;
+    animation: typing 3.5s steps(30, end) infinite, blink-caret .75s step-end infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--sky-400); } }
+
+/* --- Card Styles --- */
+.card {
+    background-color: #1f2937; border: 1px solid #374151; border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative; overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--sky-400);
+}
+.card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 0.75rem; border: 2px solid transparent;
+    background: radial-gradient(circle at 50% 0, rgba(56, 189, 248, 0.3), transparent 50%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out; mask-composite: exclude;
+    opacity: 0; transition: opacity 0.3s ease;
+}
+.card:hover::before { opacity: 1; }
+
+/* --- Project Card --- */
+.project-card img { transition: transform 0.4s ease-out; }
+.project-card:hover img { transform: scale(1.05); }
+.project-card .tech-tag { background-color: #374151; transition: background-color 0.3s ease; }
+.project-card:hover .tech-tag { background-color: var(--sky-500); }
+/* FIX: Ensure card content is clickable */
+.project-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Buttons --- */
+.glowing-btn {
+    position: relative; color: white; border: 2px solid transparent;
+    background: linear-gradient(45deg, var(--sky-500), #3b82f6);
+    background-origin: border-box; box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glowing-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -10px var(--sky-400); }
+
+/* --- Scroll Animations --- */
+.reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
